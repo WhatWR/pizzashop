@@ -12,11 +12,12 @@ Goals to achieve for the code are:
 ### Background
 
 Pizza describes a pizza with a size and optional toppings.  The price depends on size and number of toppings.  For example, large pizza is 280 Baht plus 20 Baht per topping.
+
 ```python
 pizza = Pizza('large')
-pizza.addTopping("mushroom")
+pizza.add_topping("mushroom")
 pizza.addtopping("pineapple")
-print("The price is", pizza.getPrice())
+print("The price is", pizza.get_price())
 'The price is 320'
 ```
 There are 2 files to start with:
@@ -159,7 +160,7 @@ Try an *Extract Method* refactoring, followed by *Move Method*.
         print(f"A {descripton}")
         print("Price:", pizza.get_price())
     ```
-5. **Eliminate Temp Variable** The code is now so simple that we don't need the `description` variable.  Eliminate it:
+5. **Eliminate Temp Variable** The code is now so simple that we don't need the `description` variable. Eliminate it:
     ```python
     def order_pizza(pizza)
         print(f"A {str(pizza)}")
